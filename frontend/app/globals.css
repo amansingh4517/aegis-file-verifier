@@ -1,0 +1,239 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 1s infinite;
+}
+
+.animate-gentle-bounce:hover {
+  animation: none;
+  transform: translateY(0);
+}
+
+:root {
+  /* AEGIS Theme: Light theme with dark accents */
+  --background: oklch(0.98 0 0);
+  --foreground: #3c3939;
+  --card: #e1e1ea;
+  --card-foreground: #3c3939;
+  --popover: oklch(0.98 0 0);
+  --popover-foreground: #3c3939;
+  --primary: #1b1b27;
+  --primary-foreground: oklch(0.95 0 0);
+  --secondary: #3c3939;
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: #e1e1ea;
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: #1b1b27;
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.9 0.02 0);
+  --input: #e1e1ea;
+  --ring: #1b1b27;
+  --light-accent: #e1e1ea;
+  --chart-1: #1b1b27;
+  --chart-2: #3c3939;
+  --chart-3: oklch(0.7 0.02 0);
+  --chart-4: oklch(0.75 0.01 0);
+  --chart-5: oklch(0.65 0.02 0);
+  --radius: 0.625rem;
+  --sidebar: #e1e1ea;
+  --sidebar-foreground: #3c3939;
+  --sidebar-primary: #1b1b27;
+  --sidebar-primary-foreground: oklch(0.95 0 0);
+  --sidebar-accent: #1b1b27;
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.9 0.02 0);
+  --sidebar-ring: #1b1b27;
+}
+
+.dark {
+  --background: #0a0a0f;
+  --foreground: #e5e5e8;
+  --card: #151520;
+  --card-foreground: #e5e5e8;
+  --popover: #151520;
+  --popover-foreground: #e5e5e8;
+  --primary: #4a4af6;
+  --primary-foreground: #ffffff;
+  --secondary: #6366f1;
+  --secondary-foreground: #ffffff;
+  --muted: #1f1f2e;
+  --muted-foreground: #a1a1aa;
+  --accent: #5b5bff;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: #27273a;
+  --input: #1f1f2e;
+  --ring: #4a4af6;
+  --light-accent: #e1e1ea;
+  --chart-1: #4a4af6;
+  --chart-2: #6366f1;
+  --chart-3: #5b5bff;
+  --chart-4: #7c3aed;
+  --chart-5: #8b5cf6;
+  --sidebar: #151520;
+  --sidebar-foreground: #e5e5e8;
+  --sidebar-primary: #4a4af6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5b5bff;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #27273a;
+  --sidebar-ring: #4a4af6;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-light-accent: var(--light-accent);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Ensure text is visible in both light and dark modes */
+  input, textarea, select {
+    color: var(--foreground) !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: var(--muted-foreground) !important;
+  }
+
+  /* Ensure labels are visible */
+  label {
+    color: var(--foreground);
+  }
+
+  /* AEGIS glow effect utilities - updated for light theme */
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(27, 27, 39, 0.15);
+  }
+
+  .glow-accent-sm {
+    box-shadow: 0 0 8px rgba(27, 27, 39, 0.1);
+  }
+
+  /* Added animation keyframes for demo circles */
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotate-circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-rotate-circle {
+    animation: rotate-circle 20s linear infinite;
+  }
+}
+
+/* Smooth theme transitions - Applied to all theme-related properties */
+:root {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* All elements get smooth transitions for theme colors */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, text-decoration-color, outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Don't transition animations or transforms */
+*:where(:not([class*="animate"])) {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, text-decoration-color, outline-color;
+}
+
+/* Buttons get faster transitions for better UX */
+button, 
+.button,
+[role="button"],
+a {
+  transition-duration: 150ms !important;
+  transition-timing-function: ease-in-out !important;
+}
