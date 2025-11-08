@@ -1,0 +1,12 @@
+# This file ensures the uploads directory exists in git# Uploads Directory
+
+# Actual uploaded files are gitignored
+
+This directory stores uploaded files for verification.
+
+Files are automatically:
+- Stored here when uploaded via `/api/verify/upload`
+- Named with unique timestamps
+- Deleted when verification is removed
+
+This directory is excluded from git via `.gitignore`.
