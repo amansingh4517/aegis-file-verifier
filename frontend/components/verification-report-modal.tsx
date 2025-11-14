@@ -120,6 +120,11 @@ export function VerificationReportModal({ isOpen, onClose, report }: Verificatio
               }
               @media print {
                 body { margin: 0; }
+                .print-hide { display: none !important; }
+                .page-break-before { page-break-before: always; }
+              }
+              @page {
+                margin: 20mm;
               }
             </style>
           </head>
@@ -343,7 +348,7 @@ export function VerificationReportModal({ isOpen, onClose, report }: Verificatio
 
           {/* Detected Issues */}
           {verificationResult?.detectedIssues && verificationResult.detectedIssues.length > 0 && (
-            <div className="bg-card border border-border rounded-lg p-4">
+            <div className="bg-card border border-border rounded-lg p-4 page-break-before">
               {/* Heading */}
               <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
                 <AlertTriangle size={18} />
@@ -521,7 +526,7 @@ export function VerificationReportModal({ isOpen, onClose, report }: Verificatio
           )}
 
           {/* Actions */}
-          <div className="flex justify-end gap-3 pt-4 border-t border-border">
+          <div className="flex justify-end gap-3 pt-4 border-t border-border print-hide">
             <Button onClick={onClose} variant="outline">
               Close
             </Button>

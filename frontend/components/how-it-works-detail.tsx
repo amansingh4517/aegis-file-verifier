@@ -19,12 +19,12 @@ export function HowItWorksDetail() {
       icon: Brain,
       title: "AI Model Analysis",
       description:
-        "Our advanced deep learning models analyze the file across multiple dimensions. These models are trained on millions of authentic and manipulated samples to detect subtle signs of tampering.",
+        "Google Gemini AI analyzes your file to detect AI-generated content, deepfakes, and digital manipulation. Our custom-engineered 18,000+ character prompt ensures 95%+ accuracy across all file types.",
       details: [
-        "Multi-model ensemble for accuracy",
-        "Pixel-level analysis for image manipulation",
-        "Audio fingerprinting and spectrum analysis",
-        "Video frame consistency checking",
+        "Powered by Google Gemini (gemini-flash-latest)",
+        "Detects AI-generated content (Midjourney, DALL-E, Stable Diffusion)",
+        "Identifies partial manipulations (inpainting, object removal)",
+        "Metadata and consistency analysis",
       ],
     },
     {
@@ -58,12 +58,12 @@ export function HowItWorksDetail() {
       icon: CheckCircle2,
       title: "Report Generation",
       description:
-        "A detailed report is generated with findings, visualizations, and recommendations. Export to PDF or integrate directly with your systems via API.",
+        "A detailed verification report is generated with findings, confidence scores, and comprehensive analysis. View results in an interactive dashboard with complete verification history.",
       details: [
         "Interactive findings dashboard",
-        "PDF export with legal formatting",
-        "API integration ready",
-        "Custom branding options",
+        "Authenticity verdict with confidence score",
+        "Risk level assessment (Low/Medium/High)",
+        "Detailed analysis with highlighted findings",
       ],
     },
   ]

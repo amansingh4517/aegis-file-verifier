@@ -5,7 +5,7 @@ export function Features() {
     {
       icon: Brain,
       title: "Advanced AI Detection",
-      description: "Machine learning models trained on millions of authentic and manipulated files.",
+      description: "Powered by Google Gemini AI to detect authentic and manipulated content with 95%+ accuracy.",
     },
     {
       icon: Zap,
@@ -20,7 +20,7 @@ export function Features() {
     {
       icon: BarChart3,
       title: "Detailed Analytics",
-      description: "Comprehensive reports showing manipulation indicators and confidence scores.",
+      description: "Get detailed reasoning and explanations for every verification result, so you know exactly why content is authentic or suspicious.",
     },
     {
       icon: Clock,

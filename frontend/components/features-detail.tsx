@@ -28,7 +28,7 @@ export function FeaturesDetail() {
           icon: Brain,
           title: "Advanced AI Detection",
           description:
-            "Multi-model ensemble using deep learning, computer vision, and signal processing to detect manipulation across all media types.",
+            "Powered by Google Gemini AI (gemini-flash-latest) with custom-engineered prompts to detect AI-generated content, deepfakes, and manipulation across all media types.",
         },
         {
           icon: FileCheck,
@@ -46,7 +46,7 @@ export function FeaturesDetail() {
           icon: BarChart3,
           title: "Detailed Analytics",
           description:
-            "Comprehensive reports with visual breakdowns, confidence scores, and specific indicators of detected manipulations.",
+            "Comprehensive reports with confidence scores, risk levels, and detailed reasoning explaining why content is authentic or suspicious, so you can trust the results.",
         },
       ],
     },
@@ -65,17 +65,6 @@ export function FeaturesDetail() {
           title: "Zero-Knowledge Architecture",
           description:
             "Files are never stored permanently. We process, analyze, and delete with no data retention policies.",
-        },
-        {
-          icon: Award,
-          title: "Compliance Certified",
-          description:
-            "SOC 2 Type II, GDPR, HIPAA, and ISO 27001 compliant. Enterprise security standards across all operations.",
-        },
-        {
-          icon: Users,
-          title: "Role-Based Access",
-          description: "Fine-grained permissions and audit logs for every verification request and team member action.",
         },
       ],
     },

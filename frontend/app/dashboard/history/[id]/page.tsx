@@ -96,6 +96,11 @@ export default function VerificationDetailPage() {
               }
               @media print {
                 body { margin: 0; }
+                .print-hide { display: none !important; }
+                .page-break-before { page-break-before: always; }
+              }
+              @page {
+                margin: 20mm;
               }
             </style>
           </head>
@@ -200,7 +205,7 @@ export default function VerificationDetailPage() {
     <DashboardLayout>
       <div className="space-y-6">
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between print-hide">
           <Button onClick={() => router.push("/dashboard/history")} variant="outline">
             <ArrowLeft size={18} className="mr-2" />
             Back to History
@@ -310,7 +315,7 @@ export default function VerificationDetailPage() {
 
         {/* Detected Issues */}
         {verificationResult?.detectedIssues && verificationResult.detectedIssues.length > 0 && (
-          <div className="bg-card border border-border rounded-lg p-6">
+          <div className="bg-card border border-border rounded-lg p-6 page-break-before">
             <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2 text-lg">
               <AlertTriangle size={20} />
               Detected Issues ({verificationResult.detectedIssues.length})
