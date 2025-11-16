@@ -13,7 +13,7 @@
 
 **Detect AI-generated content, deepfakes, and digital manipulation with 95%+ accuracy using Google's Gemini AI.**
 
-[🎬 Demo Video](#-demo-video) • [📖 Documentation](#-quick-start) • [🐛 Issues](https://github.com/amansingh4517/aegis-file-verifier/issues)
+[▶️ WATCH DEMO (2-5 minutes)](https://youtu.be/I1H9m0NfEAI)
 
 ---
 
@@ -21,7 +21,7 @@
 
 ✅ **Functional MVP** - Production-ready application  
 ✅ **Demo Video** - 2-5 minute walkthrough  
-✅ **Google Gemini** - Core AI engine (gemini-flash-latest)  
+✅ **Google Gemini** - Core AI engine (Flash 1.5)  
 ✅ **Impact** - Real-world use cases with metrics  
 ✅ **Scalable** - Enterprise-ready architecture  
 ✅ **Unique** - 6 competitive advantages  
@@ -33,7 +33,7 @@
 
 ## 🎬 Demo Video
 
-**[▶️ WATCH DEMO (2-5 minutes)](https://youtu.be/your-demo-video-link)**
+**[▶️ WATCH DEMO (2-5 minutes)](https://youtu.be/I1H9m0NfEAI)**
 
 **Demo Coverage:** User auth → File upload → AI verification → Results analysis → Dashboard
 
@@ -51,7 +51,7 @@
 
 ### Our Solution
 - ✅ Detects partial manipulations (object removal, inpainting)
-- ✅ 95%+ accuracy using Google Gemini (gemini-flash-latest)
+- ✅ 95%+ accuracy using Google Gemini Flash 1.5
 - ✅ Multi-format support (Image, Document, Audio, Video)
 - ✅ 3-5 second verification time
 - ✅ Free and open-source
@@ -83,7 +83,7 @@
 
 ## 🤖 Google Gemini Integration
 
-### Why Gemini (gemini-flash-latest)?
+### Why Gemini Flash 1.5?
 ✅ **Superior vision capabilities** - Advanced pattern recognition  
 ✅ **Speed & efficiency** - 3-5 second analysis  
 ✅ **Cost-effective** - Optimized for real-time use  
@@ -93,7 +93,7 @@
 ```javascript
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: 'gemini-flash-latest' });
+const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 // 18,481-character custom prompt for verification
 const result = await model.generateContent([prompt, fileData]);
@@ -205,7 +205,7 @@ Visit `http://localhost:3000` 🚀
 
 **Frontend:** Next.js 16 • React 19 • TypeScript • Tailwind CSS 4 • shadcn/ui  
 **Backend:** Node.js • Express.js • MongoDB • Mongoose  
-**AI:** Google Gemini (gemini-flash-latest) • Custom prompt engineering  
+**AI:** Google Gemini Flash 1.5 • Custom prompt engineering  
 **Auth:** JWT • bcrypt  
 **Deployment:** Vercel • Railway • MongoDB Atlas
 
